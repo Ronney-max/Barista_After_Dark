@@ -1,0 +1,135 @@
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#1a5418,#ac7322,#00c6ff);
+}
+
+/* Main container */
+.container{
+  background: rgba(196, 61, 27, 0.21);
+  backdrop-filter: blur(15px);
+  border-radius:20px;
+  padding:40px;
+  width:420px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  color:white;
+}
+
+/* Title */
+h1{
+  font-size:32px;
+  margin-bottom:10px;
+  background: linear-gradient(45deg,#0fbd18,#00d9f5);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* subtitle */
+h3{
+  margin:20px 0 10px;
+  color:#ddd;
+}
+
+/* payment link */
+a{
+  display:inline-block;
+  margin-bottom:25px;
+  color:#00f5a0;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+a:hover{
+  color:#00d9f5;
+}
+
+/* select */
+select{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  margin:10px 0 20px;
+  background:#ffffff62;
+  font-size:16px;
+}
+
+/* inputs */
+input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:10px;
+  outline:none;
+  font-size:15px;
+}
+
+/* button */
+button{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  border:none;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+  background: linear-gradient(45deg,#ff512f,#dd2476);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background: linear-gradient(45deg,#e6db05d0,#9b6e06);
+}
+
+/* Centers the section title and the wrapper divs */
+.Section-title, 
+.Section-title + div, 
+.Section-title + div + div {
+  text-align: center;
+  display: block;
+}
+
+/* Aligns the checkbox and label inline and centers the text wrapper */
+.Section-title + div, 
+.Section-title + div + div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Adds clean spacing between the choices */
+}
+
+/* Adds a small gap between the box and the text */
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 120px; /* Keeps checkboxes perfectly left-aligned with each other while centered on screen */
+}
