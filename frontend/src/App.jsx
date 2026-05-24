@@ -25,7 +25,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "https://barista-after-dark.onrender.com/register",
+        "https://barista-after-dark.onrender.com/participants",
         {
           method: "POST",
           headers: {
@@ -34,6 +34,8 @@ function App() {
           body: JSON.stringify(formData)
         }
       );
+
+      console.log(response);
 
       const data = await response.json();
 
