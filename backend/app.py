@@ -1,17 +1,13 @@
-import os
-import sqlite3
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import sqlite3
 
 app = Flask(__name__)
-CORS(app)
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH =os.path.join(BASE_DIR, "database.db")
+CORS(app, origins=["https://peaceful-sorbet-684f9b.netlify.app"])
 
 # CREATE DATABASE TABLE
 def init_db():
-    conn = sqlite3.connect("DB_PATH")
+    conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
 
     cursor.execute("""
@@ -34,8 +30,7 @@ init_db()
 def home():
     return jsonify({"status": "success", "message": "Latte Art Competition API Running"})
 
-if __name__ == "__name__":
-    app.run(debug=True, port=5000)
+
 
 # REGISTER ROUTE
 @app.route("/register", methods=["POST"])
