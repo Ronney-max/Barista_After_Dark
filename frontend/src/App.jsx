@@ -25,7 +25,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "https://barista-after-dark.onrender.com/register",
+        "http://127.0.0.1:5000/register",
         {
           method: "POST",
           headers: {
